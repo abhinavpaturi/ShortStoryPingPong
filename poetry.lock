@@ -323,6 +323,25 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "openai"
+version = "0.27.4"
+description = "Python client library for the OpenAI API"
+category = "main"
+optional = false
+python-versions = ">=3.7.1"
+
+[package.dependencies]
+aiohttp = "*"
+requests = ">=2.20"
+tqdm = "*"
+
+[package.extras]
+datalib = ["numpy", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)", "openpyxl (>=3.0.7)"]
+dev = ["black (>=21.6b0,<22.0.0)", "pytest (>=6.0.0,<7.0.0)", "pytest-asyncio", "pytest-mock"]
+embeddings = ["scikit-learn (>=1.0.2)", "tenacity (>=8.0.1)", "matplotlib", "plotly", "numpy", "scipy", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)", "openpyxl (>=3.0.7)"]
+wandb = ["wandb", "numpy", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)", "openpyxl (>=3.0.7)"]
+
+[[package]]
 name = "packaging"
 version = "23.0"
 description = "Core utilities for Python packages"
@@ -875,7 +894,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "70d77f9760440383ea021fd8a0d2839c2f3269e6cf88865aa095c09843d62ca3"
+content-hash = "ac768b79dae19a7aac09a8e105f770235db8c43e3d1ff789d483d9cb05d334f8"
 
 [metadata.files]
 aiohttp = []
@@ -907,6 +926,7 @@ markupsafe = []
 multidict = []
 murmurhash = []
 numpy = []
+openai = []
 packaging = []
 parso = []
 passlib = []
