@@ -1,9 +1,9 @@
+import os
 import openai
 import re
 
 # Initialize OpenAI API client
-openai.api_key = ("Your api key here")
-
+openai.api_key = os.environ['openai api']
 
 def get_story_continuation(prompt, tokens=30):
   response = openai.Completion.create(
