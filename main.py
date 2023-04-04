@@ -2,7 +2,7 @@ import openai
 import re
 
 # Initialize OpenAI API client
-openai.api_key = ("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")
+openai.api_key = ("Your api key here")
 
 
 def get_story_continuation(prompt, tokens=30):
